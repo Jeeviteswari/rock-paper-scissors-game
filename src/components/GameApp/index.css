@@ -1,0 +1,11 @@
+.bg-container {
+  height: 100vh;
+  background-color: #223a5f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px;
+  width: 100%;
+  max-width: 1140px;
+}
