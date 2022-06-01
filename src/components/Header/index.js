@@ -1,18 +1,28 @@
-import './index.css'
+import {
+  ScoreContainer,
+  ScoreNameContainer,
+  ScoreName,
+  ScoreBoard,
+  ScoreHeading,
+  ScoreResult,
+} from './styledComponents'
 
-const Header = () => (
-  <>
-    <div className="header-container">
-      <div className="headings">
-        <h1 className="heading">ROCK</h1>
-        <h1 className="heading">PAPER</h1>
-        <h1 className="heading">SCISSORS</h1>
-      </div>
-      <div className="score-container">
-        <p className="score-name">Score</p>
-        <p className="score-value">0</p>
-      </div>
-    </div>
-  </>
-)
+const Header = props => {
+  const {score} = props
+  return (
+    <ScoreContainer>
+      <ScoreNameContainer>
+        <ScoreName>
+          ROCK
+          <br /> PAPER <br /> SCISSORS
+        </ScoreName>
+      </ScoreNameContainer>
+      <ScoreBoard>
+        <ScoreHeading>Score</ScoreHeading>
+        <ScoreResult>{score}</ScoreResult>
+      </ScoreBoard>
+    </ScoreContainer>
+  )
+}
+
 export default Header
